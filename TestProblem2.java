@@ -1,5 +1,6 @@
 interface Shape{
-    abstract public double calcArea();
+    public double calcArea();
+    public String ShapeName();
 }
 
 class Point implements Shape{
@@ -22,6 +23,11 @@ class Point implements Shape{
     public double calcArea() {
         return 0.0;
     }
+
+    @Override
+    public String ShapeName(){
+        return "Point";
+    }
 }
 
 class Circle extends Point{
@@ -42,6 +48,11 @@ class Circle extends Point{
     public double calcArea(){
         return Math.PI*this.radius * this.radius;
     }
+
+    @Override
+    public String ShapeName(){
+        return "Circle";
+    }
 }
 
 public class TestProblem2{
@@ -52,5 +63,7 @@ public class TestProblem2{
 
         Circle c = new Circle(p,4);
         System.out.println(c.calcArea());
+        System.out.println(c.ShapeName());
+        System.out.println(p.ShapeName());
     }
 }
