@@ -56,6 +56,9 @@ class Circle extends Point{
 }
 
 public class TestProblem2{
+    public static String determineShapeName(Shape s){
+        return s.ShapeName();
+    }
     public static void main(String[] args) {
         System.out.println("Hello World");
         Point p = new Point(2,3);
@@ -63,7 +66,7 @@ public class TestProblem2{
 
         Circle c = new Circle(p,4);
         System.out.println(c.calcArea());
-        System.out.println(c.ShapeName());
-        System.out.println(p.ShapeName());
+        System.out.println("Shape:" + determineShapeName(c));
+        System.out.println("Shape:" + determineShapeName(p));
     }
 }
