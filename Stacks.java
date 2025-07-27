@@ -2,8 +2,8 @@ import java.util.*;
 
 // 1. MyStack class (Generic + Encapsulation + Abstraction via Iterable)
 class MyStack<T> implements Iterable<T> {
-    private Stack<T> s;        // Encapsulated Stack
-    private int maxSize;
+    private final Stack<T> s;        // Encapsulated Stack
+    private final int maxSize;
 
     public MyStack(int maxSize) {
         this.maxSize = maxSize;
