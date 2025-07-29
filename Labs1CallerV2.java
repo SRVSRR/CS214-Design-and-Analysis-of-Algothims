@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class Labs1CallerV2{
     int phoneNumber;
-    string name, message, location;
+    String name, message, location;
     boolean onhold;
 
     // Constructor for users that answer the call
@@ -16,7 +16,7 @@ public class Labs1CallerV2{
     }
 
     // constructor for callers that pick up
-    public Labs1CallerV2(int phoneNumber, string name, string location, string message, boolean onhold){
+    public Labs1CallerV2(int phoneNumber, String name, String location, String message, boolean onhold){
         this.phoneNumber = phoneNumber;
         this.onhold = false;
         this.name = name;
@@ -33,5 +33,3 @@ public class Labs1CallerV2{
     }
 
 }
-
-class
