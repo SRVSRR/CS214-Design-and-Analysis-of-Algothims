@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 interface Shape{
     public double calcArea();
     public String ShapeName();
