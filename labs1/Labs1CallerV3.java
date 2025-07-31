@@ -1,10 +1,12 @@
+package labs1;
+
 import java.util.Queue;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Labs1CallerV3 {
-    public static void main(String[] args){
-        Queue<String> queue = new LinkedList<>();
+    public static <Caller> void main(String[] args){
+        Queue<Caller> queue = new LinkedList<>();
         Scanner scanner = new Scanner(System.in);
         String input;
 
@@ -24,12 +26,12 @@ public class Labs1CallerV3 {
             switch(input){
                 case "1": // Enter phone number
                     System.out.println("Enter phone number");
-                    String number = scanner.nextLine();
+                    Caller number = scanner.nextLine();
                     queue.add(number);
                     break;
                 case "2": //  Remove phone number
                     System.out.println("Removing number");
-                    String removedNumber = queue.remove();
+                    Caller removedNumber = queue.remove();
                     System.out.println("Number removed: " +  removedNumber);
                     break;
                 case "3": // Numbers in queue
@@ -38,7 +40,7 @@ public class Labs1CallerV3 {
                 case "4":
                     System.out.println("Enter phone number");
                     String hangUp = scanner.nextLine();
-                    queue.remove(hangUp);
+                    queue.remove(new Caller(hangUp));
                     System.out.println("Number: " + hangUp + " was removed from queue");
                     break;
                 case "5":
