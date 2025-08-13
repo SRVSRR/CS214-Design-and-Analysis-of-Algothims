@@ -1,4 +1,4 @@
-package week3;
+package week4;
 
 class greet implements Runnable {
     private final String greeting;

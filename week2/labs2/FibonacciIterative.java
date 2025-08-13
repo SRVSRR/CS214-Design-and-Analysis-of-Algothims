@@ -1,6 +1,7 @@
 package week2.labs2;
 
 public class FibonacciIterative {
+    public int count;
     public long compute(int n) {
         if (n <= 1)
             return n;
@@ -11,8 +12,13 @@ public class FibonacciIterative {
             result = a + b;
             a = b;
             b = result;
+            count++;
         }
 
         return result;
+    }
+
+    public int count() {
+        return count;
     }
 }

@@ -12,14 +12,16 @@ public class FibonacciBenchMark {
             long start = System.nanoTime();
             long result = itr.compute(i);
             long end = System.nanoTime();
-            System.out.printf("n = %d, time = %d, result = %d \n", i, (end-start), result);
+            int counter = itr.count();
+            System.out.printf("n = %d, time = %d, result = %d passes = %d \n", i, (end-start), result, counter);
         }
 
         for(int i : recTest){
             long start = System.nanoTime();
             long result = rec.compute(i);
             long end = System.nanoTime();
-            System.out.printf("n = %d, time = %d, result = %d \n", i, (end-start), result);
+            long counter = rec.getCount();
+            System.out.printf("n = %d, time = %d, result = %d, passes = %d \n", i, (end-start), result, counter);
         }
     }
 }
